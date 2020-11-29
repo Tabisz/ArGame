@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
 
     IEnumerator DestroyCor()
     {
-        yield return  new WaitForSeconds(3);
-        Destroy(transform);
+        yield return  new WaitForSeconds(1.5f);
+        Destroy(gameObject);
     }
 }
