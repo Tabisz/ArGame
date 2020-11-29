@@ -14,9 +14,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/_Scripts/Tower.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Scripts/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/Shooter.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/EnemyScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Bullet.cs" />
       </list>
     </option>
   </component>
@@ -59,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606658738939</updated>
-      <workItem from="1606658747455" duration="4784000" />
+      <workItem from="1606658747455" duration="5139000" />
     </task>
     <servers />
   </component>
