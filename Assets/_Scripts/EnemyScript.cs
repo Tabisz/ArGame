@@ -11,8 +11,8 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] Rigidbody rb;
     float speed = .1f;
 
-    [Range(0f, 1f)] public float positionStrength = 1f;
-    [Range(0f, 1f)] public float rotationStrength = 1f;
+    [Range(0f, 1f)] public float positionStrength = 1f; 
+    public float rotationStrength = 1f;
 
 
     public void Init(Tower tower)
@@ -29,7 +29,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (target == null) return;
 
-        Vector3 deltaPos = target - transform.position;
+        Vector3 deltaPos = (target - transform.position).normalized;
         rb.velocity = 1f / Time.fixedDeltaTime * deltaPos * Mathf.Pow(positionStrength, 90f * Time.fixedDeltaTime);
 
 
@@ -39,7 +39,8 @@ public class EnemyScript : MonoBehaviour
     private void RotateTowards(Vector3 to) {
      
         Quaternion _lookRotation = 
-            Quaternion.LookRotation((to - transform.position).normalized);
+            Quaternion.LookRotation((to - transform.position).normalized,tower.transform.up);
+        
         
         transform.rotation = 
             Quaternion.Slerp(transform.rotation, _lookRotation, Time.fixedDeltaTime * rotationStrength);

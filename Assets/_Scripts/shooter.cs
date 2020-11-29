@@ -9,11 +9,6 @@ public class Shooter : MonoBehaviour
     GameObject bulletPrefab;
     public float shootForce = 50;
 
-    private void Start()
-    {
-        StartCoroutine(DestroyCor());
-    }
-
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -24,10 +19,5 @@ public class Shooter : MonoBehaviour
         }
     }
 
-    IEnumerator DestroyCor()
-    {
-        yield return  new WaitForSeconds(6);
-        Destroy(transform);
-    }
 }
 

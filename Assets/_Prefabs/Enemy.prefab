@@ -310,8 +310,8 @@ MonoBehaviour:
   target: {x: 0, y: 0, z: 0}
   tower: {fileID: 0}
   rb: {fileID: 5612568399467984003}
-  positionStrength: 0.029
-  rotationStrength: 1
+  positionStrength: 0.08
+  rotationStrength: 3
 --- !u!54 &5612568399467984003
 Rigidbody:
   m_ObjectHideFlags: 0

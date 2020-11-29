@@ -7,11 +7,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/_Scripts/Shooter.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/Tower.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Bullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Shooter.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/EnemyScript.cs" />
       </list>
     </option>
@@ -55,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606658738939</updated>
-      <workItem from="1606658747455" duration="1916000" />
+      <workItem from="1606658747455" duration="4784000" />
     </task>
     <servers />
   </component>
