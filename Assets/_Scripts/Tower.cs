@@ -19,6 +19,8 @@ public class Tower : MonoBehaviour
 
     public Vector2 spawningArea;
     public Transform spawnHeight;
+
+    public Transform enemyTarget;
     
     
 

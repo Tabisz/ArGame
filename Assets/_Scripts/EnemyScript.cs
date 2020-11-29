@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyScript : MonoBehaviour
 {
     private NavMeshAgent navMeshAgent;
-    public Transform target;
+    public Vector3 target;
     public Tower tower;
     [SerializeField] Rigidbody rb;
     float speed = .1f;
@@ -21,7 +21,7 @@ public class EnemyScript : MonoBehaviour
         rb.useGravity = false;
         rb.maxAngularVelocity = 30f;
         this.tower = tower;
-        target = tower.transform.GetChild(0);
+        target = tower.enemyTarget.position;
     }
 
 
@@ -29,19 +29,21 @@ public class EnemyScript : MonoBehaviour
     {
         if (target == null) return;
 
-        Vector3 deltaPos = target.transform.position - transform.position;
+        Vector3 deltaPos = target - transform.position;
         rb.velocity = 1f / Time.fixedDeltaTime * deltaPos * Mathf.Pow(positionStrength, 90f * Time.fixedDeltaTime);
 
-        Quaternion deltaRot = target.transform.rotation * Quaternion.Inverse(transform.rotation);
 
-        float angle;
-        Vector3 axis;
+        RotateTowards(target);
+    }
 
-        deltaRot.ToAngleAxis(out angle, out axis);
-
-        if (angle > 180.0f) angle -= 360.0f;
-
-        if (angle != 0) rb.angularVelocity = (1f / Time.fixedDeltaTime * angle * axis * 0.01745329251994f * Mathf.Pow(rotationStrength, 90f * Time.fixedDeltaTime));
+    private void RotateTowards(Vector3 to) {
+     
+        Quaternion _lookRotation = 
+            Quaternion.LookRotation((to - transform.position).normalized);
+        
+        transform.rotation = 
+            Quaternion.Slerp(transform.rotation, _lookRotation, Time.fixedDeltaTime * rotationStrength);
+        
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -44,12 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb158682beaeda4784ef364597ad8cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemysCount: 10
-  currentEnemysCount: 0
+  maxEnemiesCount: 10
+  currentEnemiesCount: 0
   enemyPrefab: {fileID: 6739867979709310315, guid: 17bba52290d262d47a986154225229fe,
     type: 3}
   spawningArea: {x: 4, y: 4}
   spawnHeight: {fileID: 6929328605924311640}
+  enemyTarget: {fileID: 6929328605924311640}
 --- !u!1 &3166323995933818262
 GameObject:
   m_ObjectHideFlags: 0
